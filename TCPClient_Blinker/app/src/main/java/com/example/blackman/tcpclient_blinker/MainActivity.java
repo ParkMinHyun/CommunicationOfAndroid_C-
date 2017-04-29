@@ -138,8 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            sendMessage("# 새로운 이용자가 들어왔습니다.");
-
+            sendMessage("# Blinker Clinet 접속 완료");
 
             // 다수 연결자를 위한 Thread 생성
             cThread = new chatThread();
