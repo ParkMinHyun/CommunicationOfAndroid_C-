@@ -38,7 +38,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_marginLeft="25dp"
+        android:layout_marginLeft="28dp"
         android:layout_width="300dp"
         android:layout_height="370dp">
            <Button

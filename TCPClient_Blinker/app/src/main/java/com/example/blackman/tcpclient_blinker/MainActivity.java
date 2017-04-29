@@ -6,11 +6,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initUI();
+        initUI();       // UI 초기화
     }
 
     public void initUI(){
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 if (cSocket == null) {
                     logger("접속중입니다...");
                     serverIP = serverIPText.getText().toString();
-                    Toast.makeText(getApplicationContext(),serverIP,Toast.LENGTH_SHORT).show();
+                    hideKeyBoard();  // 키보드 숨기기
                     connect(serverIP, port , "Android_Blinker_Client");
                 }
                 break;
@@ -188,6 +188,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    public void hideKeyBoard(){
+        InputMethodManager imm = (InputMethodManager)getSystemService( this.INPUT_METHOD_SERVICE );
+        imm.hideSoftInputFromWindow( serverIPText.getWindowToken(), 0 );
+    }
 
     class chatThread extends Thread {
         private boolean flag = false; // 스레드 유지(종료)용 플래그
