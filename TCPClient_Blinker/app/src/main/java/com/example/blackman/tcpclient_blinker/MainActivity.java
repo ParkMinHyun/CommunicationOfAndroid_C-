@@ -1,10 +1,10 @@
 package com.example.blackman.tcpclient_blinker;
 
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +21,7 @@ import java.net.UnknownHostException;
 public class MainActivity extends AppCompatActivity {
     /** Called when the activity is first created. */
     public Socket cSocket = null;
-    private String server = "172.30.1.19";         // 서버 ip주소
+    private String serverIP;         // 서버 ip주소
     private int port = 9000;                           // 포트번호
 
     public PrintWriter streamOut = null;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     public chatThread cThread = null;
 
-    public EditText nickText;
+    public EditText serverIPText;
     public TextView textView;
     public ScrollView scrollView;
     public Button changeBrithnessBtn, revertBrightnessBtn;
@@ -44,12 +44,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initUI();
-
-        logger("채팅을 시작합니다.");
     }
 
     public void initUI(){
-        nickText = (EditText)findViewById(R.id.connText);
+        serverIPText = (EditText)findViewById(R.id.serverIP_textBox);
         textView = (TextView)findViewById(R.id.txtView);
         scrollView = (ScrollView)findViewById(R.id.scrollView1);
         changeBrithnessBtn = (Button)findViewById(R.id.changeBrightBtn);
@@ -71,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.connBtn: // 접속버튼
                 if (cSocket == null) {
-                    nickName = nickText.getText().toString();
                     logger("접속중입니다...");
-                    connect(server, port , nickName);
+                    serverIP = serverIPText.toString();
+                    connect(serverIP, port , "Android_Blinker_Client");
                 }
                 break;
             case R.id.closeBtn: // 나가기 버튼
@@ -125,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         protected Socket doInBackground(String... params) {
 // TODO Auto-generated method stub
             try {
-                cSocket = new Socket(server, port);
+                cSocket = new Socket(serverIP, port);
                 streamOut = new PrintWriter(cSocket.getOutputStream(), true);
                 streamIn = new BufferedReader(new InputStreamReader(cSocket.getInputStream()));
             } catch (UnknownHostException e) {
