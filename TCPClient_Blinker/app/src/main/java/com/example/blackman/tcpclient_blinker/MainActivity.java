@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the activity is first created. */
     public Socket cSocket = null;
     private String serverIP;         // 서버 ip주소
-    private int port = 9000;                           // 포트번호
+    private int port = 9000;         // 포트번호
 
     public PrintWriter streamOut = null;
     public BufferedReader streamIn = null;
@@ -70,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.connBtn: // 접속버튼
                 if (cSocket == null) {
                     logger("접속중입니다...");
-                    serverIP = serverIPText.toString();
+                    serverIP = serverIPText.getText().toString();
+                    Toast.makeText(getApplicationContext(),serverIP,Toast.LENGTH_SHORT).show();
                     connect(serverIP, port , "Android_Blinker_Client");
                 }
                 break;
