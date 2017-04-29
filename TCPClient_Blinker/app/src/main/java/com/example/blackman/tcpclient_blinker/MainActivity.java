@@ -91,23 +91,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.changeBrightBtn: // 화면 색상 바꾸는 버튼 클릭시
                 sendMessageToServer(MagicNumber.CHANGE_BRIGHTNESS);
                 break;
-            case R.id.revertBrightBtn: // 화면 색상 바꾸는 버튼 클릭시
+            case R.id.revertBrightBtn: // 화면 색상 원래대로 가게하는 버튼 클릭시
                 sendMessageToServer(MagicNumber.REVERT_BRIGHTNESS);
                 break;
-            case R.id.showAlrimchangBtn: // 화면 색상 바꾸는 버튼 클릭시
+            case R.id.showAlrimchangBtn: // 알림창 나오는 버튼 클릭시
                 sendMessageToServer(MagicNumber.SHOW_ALRIMCHANG);
                 break;
-            case R.id.closeAlrimchangBtn: // 화면 색상 바꾸는 버튼 클릭시
+            case R.id.closeAlrimchangBtn: // 알림창 닫는 버튼 클릭시
                 sendMessageToServer(MagicNumber.CLOSE_ALRIMCHANG);
                 break;
-            case R.id.eyeEvent1Btn: // 화면 색상 바꾸는 버튼 클릭시
+            case R.id.eyeEvent1Btn: // 눈 운동 이벤트 1 버튼 클릭시
                 sendMessageToServer(MagicNumber.SHOW_EYE_EVENT1);
                 break;
-            case R.id.eyeEvent2Btn: // 화면 색상 바꾸는 버튼 클릭시
+            case R.id.eyeEvent2Btn: // 눈 운동 이벤트 2 버튼 클릭시
                 sendMessageToServer(MagicNumber.SHOW_EYE_EVENT2);
                 break;
         }
     }
+
+    // 메세지 서버에 보내는 함수
+    // 소켓이 비어있지 않으면 sendMessage() 함수를 통해 전송
     private void sendMessageToServer(String msgString)
     {
         if (cSocket != null) {
@@ -119,25 +122,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    // 연결 설정하기
     private class connectTask extends AsyncTask<String, Void , Socket> {
 
         @Override
         protected Socket doInBackground(String... params) {
-// TODO Auto-generated method stub
             try {
                 cSocket = new Socket(serverIP, port);
                 streamOut = new PrintWriter(cSocket.getOutputStream(), true);
                 streamIn = new BufferedReader(new InputStreamReader(cSocket.getInputStream()));
             } catch (UnknownHostException e) {
-// TODO Auto-generated catch block
                 e.printStackTrace();
             } catch (IOException e) {
-// TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
-            sendMessage("# 새로운 이용자님이 들어왔습니다.");
+            sendMessage("# 새로운 이용자가 들어왔습니다.");
 
+
+            // 다수 연결자를 위한 Thread 생성
             cThread = new chatThread();
             cThread.start();
 
@@ -164,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             logger(ex.toString());
         }
-
     }
 
     Handler mHandler = new Handler() {   // 스레드에서 메세지를 받을 핸들러.
