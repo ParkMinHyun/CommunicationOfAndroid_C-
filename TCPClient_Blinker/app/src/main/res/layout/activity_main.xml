@@ -35,62 +35,72 @@
         </Button>
     </LinearLayout>
 
-        <RelativeLayout
-            android:layout_marginLeft="45dp"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
+    <RelativeLayout
+        android:layout_marginLeft="45dp"
+        android:layout_width="300dp"
+        android:layout_height="370dp">
+           <Button
+              android:layout_marginTop="20dp"
+              android:layout_width="150dp"
+              android:layout_height="100dp"
+              android:text="Change Brightness"
+               android:onClick="communicationBtnClick"
+              android:id="@+id/changeBrightBtn" />
+           <Button
+              android:layout_marginTop="20dp"
+              android:layout_toRightOf="@id/changeBrightBtn"
+              android:layout_width="150dp"
+              android:layout_height="100dp"
+              android:text="Revert Brightness"
+               android:onClick="communicationBtnClick"
+              android:id="@+id/revertBrightBtn" />
+           <Button
+              android:layout_below="@id/changeBrightBtn"
+              android:layout_marginTop="20dp"
+              android:layout_width="150dp"
+              android:layout_height="100dp"
+              android:text="Show Alrimchang"
+               android:onClick="communicationBtnClick"
+              android:id="@+id/showAlrimchangBtn" />
+           <Button
+              android:layout_below="@id/revertBrightBtn"
+              android:layout_toRightOf="@id/showAlrimchangBtn"
+              android:layout_marginTop="20dp"
+              android:layout_width="150dp"
+              android:layout_height="100dp"
+              android:text="Close Alrimchang"
+               android:onClick="communicationBtnClick"
+              android:id="@+id/closeAlrimchangBtn" />
+           <Button
+              android:layout_below="@id/showAlrimchangBtn"
+              android:layout_marginTop="20dp"
+              android:layout_width="150dp"
+              android:layout_height="100dp"
+              android:text="Show EyeEvent 1"
+               android:onClick="communicationBtnClick"
+              android:id="@+id/eyeEvent1Btn" />
             <Button
-                android:layout_marginTop="50dp"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Change Brightness"
-                android:id="@+id/changeBrightBtn" />
+               android:layout_below="@id/closeAlrimchangBtn"
+               android:layout_toRightOf="@id/eyeEvent1Btn"
+               android:layout_marginTop="20dp"
+               android:layout_width="150dp"
+               android:layout_height="100dp"
+               android:text="Show EyeEvent2"
+                android:onClick="communicationBtnClick"
+               android:id="@+id/eyeEvent2Btn" />
+    </RelativeLayout>
 
-            <Button
-                android:layout_marginTop="50dp"
-                android:layout_toRightOf="@id/changeBrightBtn"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Revert Brightness"
-                android:id="@+id/revertBrightBtn" />
-
-            <Button
-                android:layout_below="@id/changeBrightBtn"
-                android:layout_marginTop="30dp"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Show Alrimchang"
-                android:id="@+id/showAlrimchangBtn" />
-
-
-            <Button
-                android:layout_below="@id/revertBrightBtn"
-                android:layout_toRightOf="@id/showAlrimchangBtn"
-                android:layout_marginTop="30dp"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Close Alrimchang"
-                android:id="@+id/closeAlrimchangBtn" />
-
-
-            <Button
-                android:layout_below="@id/showAlrimchangBtn"
-                android:layout_marginTop="30dp"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Show EyeEvent 1"
-                android:id="@+id/eyeEvent1Btn" />
-
-
-            <Button
-                android:layout_below="@id/closeAlrimchangBtn"
-                android:layout_toRightOf="@id/eyeEvent1Btn"
-                android:layout_marginTop="30dp"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:text="Show EyeEvent2"
-                android:id="@+id/eyeEvent2Btn" />
-        </RelativeLayout>
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

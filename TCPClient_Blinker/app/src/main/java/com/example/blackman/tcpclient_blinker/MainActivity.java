@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public chatThread cThread = null;
 
     public EditText nickText;
+    public TextView textView;
+    public ScrollView scrollView;
     public Button changeBrithnessBtn, revertBrightnessBtn;
     public Button showAlrimchangBtn, closeAlrimchangBtn;
     public Button showEyeEvent1Btn, showEyeEvent2Btn;
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void initUI(){
         nickText = (EditText)findViewById(R.id.connText);
+        textView = (TextView)findViewById(R.id.txtView);
+        scrollView = (ScrollView)findViewById(R.id.scrollView1);
         changeBrithnessBtn = (Button)findViewById(R.id.changeBrightBtn);
         revertBrightnessBtn = (Button)findViewById(R.id.revertBrightBtn);
         showAlrimchangBtn = (Button)findViewById(R.id.showAlrimchangBtn);
@@ -77,20 +81,38 @@ public class MainActivity extends AppCompatActivity {
                     sendMessage("# [" + nickName + "]님이 나가셨습니다.");
                 }
                 break;
-            case R.id.changeBrightBtn: // 화면 색상 바꾸는 버튼 클릭시
 
-
-                break;
         }
     }
 
-    private void sendMessageToServer()
+    public void communicationBtnClick(View v){
+        switch (v.getId())
+        {
+            case R.id.changeBrightBtn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.CHANGE_BRIGHTNESS);
+                break;
+            case R.id.revertBrightBtn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.REVERT_BRIGHTNESS);
+                break;
+            case R.id.showAlrimchangBtn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.SHOW_ALRIMCHANG);
+                break;
+            case R.id.closeAlrimchangBtn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.CLOSE_ALRIMCHANG);
+                break;
+            case R.id.eyeEvent1Btn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.SHOW_EYE_EVENT1);
+                break;
+            case R.id.eyeEvent2Btn: // 화면 색상 바꾸는 버튼 클릭시
+                sendMessageToServer(MagicNumber.SHOW_EYE_EVENT2);
+                break;
+        }
+    }
+    private void sendMessageToServer(String msgString)
     {
         if (cSocket != null) {
-            String msgString = "1";
             if (msgString != null && !"".equals(msgString)) {
-                sendMessage("[" + nickName + "] " + msgString);
-                msgText.setText("");
+                sendMessage(msgString);
             }
         } else {
             logger("접속을 먼저 해주세요.");
@@ -132,8 +154,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void logger(String MSG) {
-        tv.append(MSG + "\n");     // 텍스트뷰에 메세지를 더해줍니다.
-        sv.fullScroll(ScrollView.FOCUS_DOWN); // 스크롤뷰의 스크롤을 내려줍니다.
+        textView.append(MSG + "\n");     // 텍스트뷰에 메세지를 더해줍니다.
+        scrollView.fullScroll(ScrollView.FOCUS_DOWN); // 스크롤뷰의 스크롤을 내려줍니다.
     }
 
     private void sendMessage(String MSG) {
