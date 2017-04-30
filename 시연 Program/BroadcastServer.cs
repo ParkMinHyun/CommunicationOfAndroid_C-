@@ -71,8 +71,8 @@ namespace EyeExercise_ScreenColor
     {
         public Socket socket;
         public Thread threadHandler;
+        EyeMovementClass eyeEvent = EyeMovementClass.getInstance();
 
-        Alrimchang showDistanceAlertForm;
         public SocketHandler(Socket socket)
         {
             this.socket = socket;
@@ -127,6 +127,12 @@ namespace EyeExercise_ScreenColor
 
                 case "2\n":
                     Form1.setLCDbrightness(255, 255, 255);
+                    break;
+                case "5\n":
+                    eyeEvent.move_infinity();
+                    break;
+                case "6\n":
+                    eyeEvent.move_LeftAndRight();
                     break;
             }
 
