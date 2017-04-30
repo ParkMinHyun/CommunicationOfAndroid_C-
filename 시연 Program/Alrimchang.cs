@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,7 +14,8 @@ namespace EyeExercise_ScreenColor
     public partial class Alrimchang : Form
     {
         public Rectangle workingArea;
-        public Boolean b = false;
+        public Boolean show_close_flag = false;
+
         public Alrimchang()
         {
             InitializeComponent();
@@ -21,41 +23,39 @@ namespace EyeExercise_ScreenColor
 
             this.Location = new Point(workingArea.Right,
                                       workingArea.Bottom - Size.Height - 30);
-            timer1.Start();
+            
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void startAnimation()
         {
             Point location = new Point(0, 0);
-            if (!b)
+            if (!show_close_flag)
             {
                 for (int i = 0; i < 488; i++)
                 {
-                    location = new Point(workingArea.Right - i, workingArea.Bottom - Size.Height - 30);
+                    location = new Point(workingArea.Right -Convert.ToInt32(i), workingArea.Bottom - Size.Height - 30);
                     this.Location = location;
+                    Thread.Sleep(50);
                 }
-                timer1.Stop();
             }
             else
             {
-                for (int i = 488; i >0; i--)
+                for (int i = 488; i > 0; i--)
                 {
-                    location = new Point(workingArea.Right+412 - i, workingArea.Bottom - Size.Height - 30);
+                    location = new Point(workingArea.Right + 412 - Convert.ToInt32(i), workingArea.Bottom - Size.Height - 30);
                     this.Location = location;
+                    Thread.Sleep(50);
                 }
-                timer1.Stop();
             }
 
-            if( b.Equals(true))
-                b = false;
+            if (show_close_flag.Equals(true))
+                show_close_flag = false;
             else
-                b = true;
-        }
+                show_close_flag = true;
 
-        public void cancel()
-        {
-            timer1.Start();
+            Thread.Sleep(100);
         }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

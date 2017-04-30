@@ -18,10 +18,11 @@ namespace EyeExercise_ScreenColor
         Alrimchang a;
         public static Form1 mainForm; //외부 클래스에서 접근하도록 하는 객체
         ShowImage showImage;
-
+       
         public Form1()
         {
             InitializeComponent();
+            BroadcastServer.start(9000);
             mainForm = this; //객체 가르키기
         }
 
@@ -154,7 +155,7 @@ namespace EyeExercise_ScreenColor
         }
 
 
-        public unsafe bool setLCDbrightness(short red, short green, short blue)
+        public static unsafe bool setLCDbrightness(short red, short green, short blue)
         {
             Graphics gg = Graphics.FromHwnd(IntPtr.Zero);
             hdc = gg.GetHdc();
@@ -198,7 +199,7 @@ namespace EyeExercise_ScreenColor
         
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            a.cancel();
+            a.startAnimation();
 
         }
 

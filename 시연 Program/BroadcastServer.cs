@@ -71,6 +71,8 @@ namespace EyeExercise_ScreenColor
     {
         public Socket socket;
         public Thread threadHandler;
+
+        Alrimchang showDistanceAlertForm;
         public SocketHandler(Socket socket)
         {
             this.socket = socket;
@@ -97,6 +99,8 @@ namespace EyeExercise_ScreenColor
                     }
                     Msgs = ASCIIEncoding.UTF8.GetString(byteimsi);
                     Console.WriteLine("클라이언트에서 받은 메세지 = " + Msgs);
+
+                    exeEvent(Msgs);
                     SendMsg(Msgs);
                 }
             }
@@ -113,6 +117,20 @@ namespace EyeExercise_ScreenColor
             }
         }
 
+        public void exeEvent(string msg)
+        {
+            switch (msg)
+            {
+                case "1\n":
+                    Form1.setLCDbrightness(255, 193, 132);
+                    break;
+
+                case "2\n":
+                    Form1.setLCDbrightness(255, 255, 255);
+                    break;
+            }
+
+        }
         public void SendMsg(string Msg)     //  메세지 보내기.
         {
             int bufferCount = 0;

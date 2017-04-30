@@ -29,3 +29,14 @@ C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\�
 C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.csproj.GenerateResource.Cache
 C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.exe
 C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.pdb
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\bin\Debug\EyeExercise+ScreenColor.exe.config
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\bin\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise+ScreenColor.csprojResolveAssemblyReference.cache
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise_ScreenColor.Alrimchang.resources
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise_ScreenColor.Form1.resources
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise_ScreenColor.Properties.Resources.resources
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise_ScreenColor.ShowImage.resources
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise+ScreenColor.csproj.GenerateResource.Cache
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\obj\Debug\EyeExercise+ScreenColor.pdb
+C:\Users\BlackMan\Documents\CommunicationOfAndroid_C-\시연 Program\bin\Debug\EyeExercise+ScreenColor.pdb
