@@ -1,0 +1,31 @@
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.exe.config
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.exe
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.pdb
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.csprojResolveAssemblyReference.cache
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.Properties.Resources.resources
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.csproj.GenerateResource.Cache
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.exe
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.pdb
+E:\visual studio 2015\ImagineCup2017_BlinkBlink\모니터화면설정+안구운동\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.Form1.resources
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.exe.config
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.pdb
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\bin\Debug\EyeExercise+ScreenColor.pdb
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.csprojResolveAssemblyReference.cache
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.Form1.resources
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.Properties.Resources.resources
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise+ScreenColor.csproj.GenerateResource.Cache
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.ShowImage.resources
+C:\Users\BlackMan\Desktop\EyeExercise+ScreenColor\obj\Debug\EyeExercise_ScreenColor.Alrimchang.resources
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\bin\Debug\EyeExercise+ScreenColor.exe.config
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\bin\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\bin\Debug\EyeExercise+ScreenColor.pdb
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.csprojResolveAssemblyReference.cache
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise_ScreenColor.Alrimchang.resources
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise_ScreenColor.Form1.resources
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise_ScreenColor.Properties.Resources.resources
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise_ScreenColor.ShowImage.resources
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.csproj.GenerateResource.Cache
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.exe
+C:\Users\BlackMan\Desktop\Ensharp 2016\★이매진컵★\최종 아이디어\시연 Program\obj\Debug\EyeExercise+ScreenColor.pdb
